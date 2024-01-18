@@ -1,0 +1,31 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "MetaII",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stack",
+		"pc",
+		"ic",
+		"inp",
+		"inbuf",
+		"outbuf",
+		"margin",
+		"stackFrameSize",
+		"stackFrame",
+		"exitlevel",
+		"pflag",
+		"symbolArgument",
+		"stringarg",
+		"gnLabel",
+		"token",
+		"outStr",
+		"tokenFlag",
+		"inputCompiler",
+		"codeCompiler"
+	],
+	"name" : "MetaII",
+	"type" : "normal"
+}
