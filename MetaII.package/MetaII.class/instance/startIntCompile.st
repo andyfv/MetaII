@@ -1,7 +1,7 @@
 compiler
 startIntCompile
 	self initIO.
-	self pc: 0.
+	self pc: 1.
 	self interpreter.
 	
 	Transcript show: self outbuf.
