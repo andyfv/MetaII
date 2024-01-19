@@ -5,7 +5,7 @@ interpreter
 	
 	self exitlevel: false.
 	
-	switch whileTrue: [
+	[switch] whileTrue: [
 		(self ic at: self pc) whileTrue: [ self pc: self pc + 1. ].
 		self pc: self pc + 1.
 		self interpretOp.
