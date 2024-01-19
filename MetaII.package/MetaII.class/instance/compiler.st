@@ -1,6 +1,7 @@
 compiler
 compiler 
 	
+	^
 	'.SYNTAX PROGRAM
 	
 	PROGRAM = 
