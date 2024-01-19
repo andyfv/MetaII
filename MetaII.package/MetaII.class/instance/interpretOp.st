@@ -8,7 +8,7 @@ interpretOp
 	(oc < self ic) & ((self ic at: oc) isLetter) & ((self ic at: oc) isInteger)
 		ifTrue: [ op := op , self ic at: oc. oc := oc + 1. ].
 		
-	switch := Set new.
+	switch := Dictionary new.
 	switch add: 'ADR' 	-> [ self symbolArgument. self runADR. ^ self ].
 	switch add: 'B' 		-> [ self symbolArgument. self runB. ^ self ].
 	switch add: 'BT' 		-> [ self symbolArgument. self runBT. ^ self ].
@@ -27,3 +27,8 @@ interpretOp
 	switch add: 'SET' 	-> [ self runSET. ^ self ].
 	switch add: 'SR' 		-> [ self runSR. ^ self ].
 	switch add: 'TST' 	-> [ self argstring. self runTST: self stringarg. ^ self ].
+		
+	switch at: op ifAbsent: [ 
+		Transcript show: 'ERROR: unknown interpreter op \''' , op , '\'''.
+		self exitlevel: true. 
+		]
