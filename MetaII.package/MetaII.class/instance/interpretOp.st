@@ -2,10 +2,12 @@ compiler
 interpretOp
 	| oc op switch |
 	
-	oc := pc.
+	oc := self pc.
 	op := ''.
 	
-	(oc < self ic) & ((self ic at: oc) isLetter) & ((self ic at: oc) isInteger)
+	(((oc < self ic size) and: 
+	[(self ic at: oc) isLetter]) and: 
+	[(self ic at: oc) isInteger])
 		ifTrue: [ op := op , self ic at: oc. oc := oc + 1. ].
 		
 	switch := Dictionary new.
@@ -29,6 +31,6 @@ interpretOp
 	switch add: 'TST' 	-> [ self argstring. self runTST: self stringarg. ^ self ].
 		
 	switch at: op ifAbsent: [ 
-		Transcript show: 'ERROR: unknown interpreter op \''' , op , '\'''.
+		Transcript show: 'ERROR: unknown interpreter op \' , op , '\'.
 		self exitlevel: true. 
 		]
