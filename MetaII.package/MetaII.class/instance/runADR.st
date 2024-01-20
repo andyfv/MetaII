@@ -1,4 +1,4 @@
-private
+op codes
 runADR
 	self gnLabel: 1.
 	self inp: 0.

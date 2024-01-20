@@ -1,4 +1,4 @@
-private
+op codes
 runCLL
 	
 	self stackFrame: self stackFrame + 1.

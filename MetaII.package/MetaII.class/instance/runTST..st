@@ -1,4 +1,4 @@
-private
+op codes
 runTST: aString
 	"Delete initial whitespace"
 	| i |

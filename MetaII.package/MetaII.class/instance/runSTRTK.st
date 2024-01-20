@@ -1,4 +1,4 @@
-private
+op codes
 runSTRTK
 	"String Token"
 	self spaces. 

@@ -1,4 +1,4 @@
-private
+op codes
 runSR
 	"String Token"
 	self spaces. 

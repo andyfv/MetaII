@@ -1,4 +1,4 @@
-private
+op codes
 runNUM
 	self spaces. 
 	self pflag: ((self inbuf at: inp) isDigit).

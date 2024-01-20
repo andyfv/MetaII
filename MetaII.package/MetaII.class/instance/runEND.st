@@ -1,4 +1,4 @@
-private
+op codes
 runEND
 	
 	self exitlevel: true.

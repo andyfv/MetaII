@@ -1,4 +1,4 @@
-private
+op codes
 runID
 	self spaces. 
 	self pflag: ((self inbuf at: inp) isCharacter).

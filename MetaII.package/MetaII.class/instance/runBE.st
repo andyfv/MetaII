@@ -1,4 +1,4 @@
-private
+op codes
 runBE
 	| i j msg ctx |
 	

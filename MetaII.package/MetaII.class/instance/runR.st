@@ -1,4 +1,4 @@
-private
+op codes
 runR
 	
 	self stackFrame = 0 ifTrue: [ self runEND. ^ self ].

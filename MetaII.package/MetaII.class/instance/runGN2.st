@@ -1,4 +1,4 @@
-private
+op codes
 runGN2
 	| gn2 |
 	gn2 := self stackFrame * stackFrameSize + 1.

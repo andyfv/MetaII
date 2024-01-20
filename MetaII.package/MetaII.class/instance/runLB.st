@@ -1,4 +1,4 @@
-private
+op codes
 runLB
 	self outStr: ''.
 		
