@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RubScrolledTextMorph",
+	"category" : "MetaII",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Meta2OutputWindow",
+	"type" : "normal"
+}
