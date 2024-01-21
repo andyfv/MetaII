@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RubScrolledTextMorph",
+	"category" : "MetaII",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"compiler"
+	],
+	"name" : "Meta2Input",
+	"type" : "normal"
+}
