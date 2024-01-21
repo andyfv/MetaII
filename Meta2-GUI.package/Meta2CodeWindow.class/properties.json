@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
 	"super" : "RubScrolledTextMorph",
-	"category" : "Meta2",
+	"category" : "Meta2-GUI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "Meta2OutputWindow",
+	"name" : "Meta2CodeWindow",
 	"type" : "normal"
 }
