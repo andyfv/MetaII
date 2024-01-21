@@ -1,0 +1,4 @@
+compiler
+startCompile
+	self startIntCompile.
+	
