@@ -1,13 +1,17 @@
 {
 	"commentStamp" : "",
-	"super" : "RubScrolledTextMorph",
+	"super" : "SpWindow",
 	"category" : "MetaII",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"compiler"
+		"compiler",
+		"inputWindow",
+		"codeWindow",
+		"outputWindow",
+		"controlsWindow"
 	],
-	"name" : "Meta2Input",
+	"name" : "Meta2GUI",
 	"type" : "normal"
 }

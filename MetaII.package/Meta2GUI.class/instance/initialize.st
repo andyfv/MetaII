@@ -5,6 +5,11 @@ initialize
 	
 	compiler := Meta2 new.
 	
+	inputWindow 	:= RubScrolledTextMorph new.
+	codeWindow 	:= RubScrolledTextMorph new.
+	outputWindow 	:= RubScrolledTextMorph new.
+	
+	
 	"Change the size"
 	self extent: 400 @ 200.
 	self borderColor: Color black.
