@@ -1,4 +1,4 @@
-IO
+input/output
 loadInput
 	| inputFileName |
 	inputFileName := 'meta2/input.txt'.
