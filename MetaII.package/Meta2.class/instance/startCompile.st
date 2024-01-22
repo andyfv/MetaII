@@ -1,4 +1,0 @@
-compiler
-startCompile
-	self startIntCompile.
-	
