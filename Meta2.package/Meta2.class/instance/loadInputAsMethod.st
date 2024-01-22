@@ -4,4 +4,4 @@ loadInputAsMethod
 
 	self class 
 		compile: ('inputCode ^ ', Character cr asString , self loadInput printString )
-		classified: #IO.
+		classified: 'input/output' asSymbol.
