@@ -4,7 +4,7 @@ runR
 	self stackFrame = 0 ifTrue: [ self runEND. ^ self ].
 	
 	"Return the pc"
-	self pc: (self stack at: self stackFrame * self stackFrameSize + 2).
+	self programCounter: (self stack at: self stackFrame * self stackFrameSize + 2).
 	
 	
 	self margin: (self stack at: self stackFrame * self stackFrameSize + 4).

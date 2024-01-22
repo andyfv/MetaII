@@ -1,4 +1,4 @@
 accessing
-pc
+programCounter
 	"Return the program counter"
-	^ pc
+	^ programCounter

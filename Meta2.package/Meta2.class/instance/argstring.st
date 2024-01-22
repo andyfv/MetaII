@@ -1,13 +1,13 @@
 private
 argstring
 	self stringarg: ''.
-	((self ic at: self pc) ~= '\''')
-		whileTrue: [ self pc: self pc + 1 ].
-	self pc: self pc + 1.
-	(self ic at: self pc) ~= '\'''
+	((self ic at: self programCounter) ~= '\''')
+		whileTrue: [ self programCounter: self programCounter + 1 ].
+	self programCounter: self programCounter + 1.
+	(self ic at: self programCounter) ~= '\'''
 		whileTrue: [ 
-			self stringarg: self stringarg , (self ic at: self pc).
-			self pc: self pc + 1.
+			self stringarg: self stringarg , (self ic at: self programCounter).
+			self programCounter: self programCounter + 1.
 			].
-	self pc: self pc + 1.
+	self programCounter: self programCounter + 1.
 	

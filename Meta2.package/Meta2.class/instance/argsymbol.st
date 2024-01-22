@@ -1,14 +1,14 @@
 private
 argsymbol
 	self symbolArgument: ''.
-	((self ic at: self pc) ~= ' ') & ((self ic at: self pc) ~= '\t')
-		whileTrue: [ self pc: self pc + 1 ].
+	((self ic at: self programCounter) ~= ' ') & ((self ic at: self programCounter) ~= '\t')
+		whileTrue: [ self programCounter: self programCounter + 1 ].
 	
-	((self ic at: self pc) == ' ') | ((self ic at: self pc) = '\t')
-		whileTrue: [ self pc: self pc + 1 ].
+	((self ic at: self programCounter) == ' ') | ((self ic at: self programCounter) = '\t')
+		whileTrue: [ self programCounter: self programCounter + 1 ].
 		
-	((self ic at: self pc) isLetter) & ((self ic at: self pc) isInteger)
+	((self ic at: self programCounter) isLetter) & ((self ic at: self programCounter) isInteger)
 		ifTrue: [ 
-			self symbolArgument: self symbolArgument , (self ic at: self pc).
-			self pc: self pc + 1.
+			self symbolArgument: self symbolArgument , (self ic at: self programCounter).
+			self programCounter: self programCounter + 1.
 			].

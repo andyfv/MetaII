@@ -7,8 +7,8 @@ interpreter
 	self exitlevel: false.
 	
 	[switch] whileTrue: [
-		[(self ic at: self pc) ~= Character tab ] whileTrue: [ self pcIncrement ].
-		self pcIncrement.
+		[(self ic at: self programCounter) ~= Character tab ] whileTrue: [ self programCounterIncrement ].
+		self programCounterIncrement.
 		self interpretOp.
 		exitlevel ifTrue: [ ^ self ]. 
 		].

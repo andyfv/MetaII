@@ -2,7 +2,7 @@ compiler
 interpretOp
 	| oc op switch |
 	
-	oc := self pc.
+	oc := self programCounter.
 	op := ''.
 	
 	(((oc < self ic size) and: 
