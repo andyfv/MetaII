@@ -1,7 +1,7 @@
 op codes
 runGN2
 	| gn2 |
-	gn2 := self stackFrame * stackFrameSize + 1.
+	gn2 := self stackFrame * stackFrameSize + 2.
 	(self stack at: gn2) = 0
 		ifTrue: [ 
 			self stack at: gn2 put: self gnLabel.
