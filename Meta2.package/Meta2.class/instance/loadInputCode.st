@@ -1,6 +1,6 @@
-input/output
-loadInput
+input code
+loadInputCode
 	| inputFileName |
 	inputFileName := 'meta2/input.txt'.
 	
-	^ self loadInput: inputFileName.
+	^ self loadFile: inputFileName.
