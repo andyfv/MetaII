@@ -5,18 +5,18 @@ interpretOp
 	oc := self programCounter.
 	op := ''.
 	
-	(((oc < self ic size) and: 
-	[(self ic at: oc) isLetter]) and: 
-	[(self ic at: oc) isInteger])
-		ifTrue: [ op := op , self ic at: oc. oc := oc + 1. ].
-		
+	[ (oc < self ic size) and: 
+	( ((self ic at: oc) isInteger) or: 
+	[ (self ic at: oc) isLetter ]
+	)] whileTrue: [ op := op , (self ic at: oc) asString . oc := oc + 1 ].
+	
 	switch := Dictionary new.
-	switch add: 'ADR' 	-> [ self symbolArgument. self runADR. ^ self ].
-	switch add: 'B' 		-> [ self symbolArgument. self runB. ^ self ].
-	switch add: 'BT' 		-> [ self symbolArgument. self runBT. ^ self ].
-	switch add: 'BF' 		-> [ self symbolArgument. self runBF. ^ self ].
+	switch add: 'ADR' 	-> [ self argsymbol. self runADR. ^ self ].
+	switch add: 'B' 		-> [ self argsymbol. self runB. ^ self ].
+	switch add: 'BT' 		-> [ self argsymbol. self runBT. ^ self ].
+	switch add: 'BF' 		-> [ self argsymbol. self runBF. ^ self ].
 	switch add: 'BE' 		-> [ self runBE. ^ self ].
-	switch add: 'CLL' 	-> [ self symbolArgument. self runCLL. ^ self ].
+	switch add: 'CLL' 	-> [ self argsymbol. self runCLL. ^ self ].
 	switch add: 'CL' 		-> [ self argstring. self runCL: self stringarg. ^ self ].
 	switch add: 'CI' 		-> [ self runCI. ^ self ].
 	switch add: 'END' 	-> [ self runEND. ^ self ].
@@ -30,7 +30,9 @@ interpretOp
 	switch add: 'SR' 		-> [ self runSR. ^ self ].
 	switch add: 'TST' 	-> [ self argstring. self runTST: self stringarg. ^ self ].
 		
-	switch at: op ifAbsent: [ 
-		Transcript show: 'ERROR: unknown interpreter op \' , op , '\'.
-		self exitlevel: true. 
-		]
+	switch at: op 
+				ifPresent: [ :b | b value ]
+				ifAbsent: [ 
+					Transcript show: 'ERROR: unknown interpreter op \' , op , '\'.
+					self exitlevel: true. 
+					]
