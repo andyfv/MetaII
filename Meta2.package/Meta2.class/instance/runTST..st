@@ -5,7 +5,7 @@ runTST: aString
 	
 	self spaces. 
 	self pflag: true.
-	i := 0.
+	i := 1.
 	
 	[ (self pflag) & (i < aString size) ] 
 		whileTrue: [
