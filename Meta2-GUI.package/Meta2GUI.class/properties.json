@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "SpWindow",
+	"category" : "Meta2-GUI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"compiler",
+		"inputWindow",
+		"codeWindow",
+		"outputWindow",
+		"controlsWindow"
+	],
+	"name" : "Meta2GUI",
+	"type" : "normal"
+}
