@@ -12,5 +12,7 @@ interpreter
 		] whileTrue: [ self programCounterIncrement ].
 		self programCounterIncrement.
 		self interpretOp.
-		switch := self exitlevel. 
+		self exitlevel 
+			ifTrue: [ switch := false ]
+			ifFalse: [ switch := true ].
 		].
