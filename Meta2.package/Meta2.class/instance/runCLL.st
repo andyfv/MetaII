@@ -1,6 +1,6 @@
 op codes
 runCLL
-	
+		
 	self stackFrame: self stackFrame + 1.
 	self stack at: (self stackFrame * self stackFrameSize + 1) put: 0.								"GN1"
 	self stack at: (self stackFrame * self stackFrameSize + 2) put: 0.								"GN2"
