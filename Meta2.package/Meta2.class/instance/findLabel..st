@@ -5,7 +5,7 @@ findLabel: aString
 	self programCounter: (self ic findString: (Character lf asString , aString , Character lf asString)).
 	found := (self programCounter >= 1).
 	
-	found ifFalse: [ self programCounter: (self ic indexOf:('\n', aString , '\r')) ].
+	found ifFalse: [ self programCounter: (self ic findString: (Character cr asString, aString , Character cr asString)) ].
 	
 	found := (self programCounter >= 1).
 	
