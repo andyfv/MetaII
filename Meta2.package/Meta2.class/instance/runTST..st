@@ -9,10 +9,10 @@ runTST: aString
 	
 	[ (self pflag) & (i < aString size) ] 
 		whileTrue: [
-			self pflag: ((aString at: i) copy translateToUppercase 
+			self pflag: ((aString at: i) copy asUppercase  
 								= 
-							  ((self inbuf at: (inp + i)) copy translateToUppercase )).
+							  ((self inbuf at: (self inp + i)) copy asUppercase )).
 			i := i + 1.
 			].
 	
-	self pflag ifTrue: [ inp := inp + aString size ].
+	self pflag ifTrue: [ self inp: self inp + aString size ].
