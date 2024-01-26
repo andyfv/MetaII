@@ -11,4 +11,4 @@ out: aString
 				].
 			].	
 	
-	self outStr: self outStr + aString. 
+	self outStr: (self outStr,  aString). 

@@ -1,5 +1,5 @@
 op codes
 runOUT
-	self outbuf: self outStr , '\n'.
+	self outbuf: (self outbuf , self outStr , '\n').
 	self outStr: '\t'.
 		
