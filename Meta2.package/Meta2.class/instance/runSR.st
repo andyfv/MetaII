@@ -2,14 +2,16 @@ op codes
 runSR
 	"String Token"
 	self spaces. 
-	self pflag: ((self inbuf at: inp) isDigit).
+	self pflag: ((self inbuf at: self inp) = $').
 	
 	self pflag ifTrue: [
 		self token: ''.
 		[self pflag] whileTrue: [
 			self token: (self token , (self inbuf at: inp) asString).
 			self inp: self inp + 1.
-			self pflag: (inbuf at: inp) isDigit .
+			self pflag: ((self inbuf at: self inp) ~= $') .
 			].
+		self token: (self token , $' asString).
+		self inp: self inp + 1.
 		self pflag: true.
 		].
