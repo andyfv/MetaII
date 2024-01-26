@@ -4,7 +4,7 @@ runBE
 	
 	self pflag ifTrue: [ ^ self ].
 	msg := 'SUNTAX ERROR:\n'
-			, 'rule: ' , self stack at: (self stackFrame * self stackFrameSize + 3) , '\n'
+			, 'rule: ' , (self stack at: (self stackFrame * self stackFrameSize + 3)) asString , '\n'
 			, 'last token: ' , self token , '\n'
 			, 'out string: ' , self outStr , '\n'
 			, 'INPUT: ' , '\n'.
