@@ -7,5 +7,5 @@ runGN1
 			self stack at: gn1 put: self gnLabel.
 			self gnLabel: self gnLabel + 1.
 			].
-		self out: ('L' , self stack at: gn1 )
+		self out: ('L' , (self stack at: gn1) asString )
 		
