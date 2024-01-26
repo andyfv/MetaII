@@ -6,7 +6,7 @@ out: aString
 		ifTrue: [
 			col := 0.
 			(col < self margin) whileTrue: [ 
-				self outStr: self outStr , ' '.
+				self outStr: self outStr , Character space.
 				col := col + 1.
 				].
 			].	

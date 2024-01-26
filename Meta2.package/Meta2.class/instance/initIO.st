@@ -4,5 +4,5 @@ initIO
 	self stackFrameSize: 5.
 	self inbuf: self inputCode.
 	self ic: self interpreterCode.
-	self outbuf: ''.
-	self outStr: '\t'.
+	self outbuf: String empty.
+	self outStr: Character tab asString.

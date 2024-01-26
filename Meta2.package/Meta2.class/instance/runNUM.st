@@ -4,7 +4,7 @@ runNUM
 	self pflag: ((self inbuf at: inp) isDigit).
 	
 	self pflag ifTrue: [
-		self token: ''.
+		self token: String empty.
 		self pflag whileTrue: [
 			self token: self token , (self inbuf at: inp).
 			self inp: self inp + 1.

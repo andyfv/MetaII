@@ -3,11 +3,16 @@ runBE
 	| i j msg ctx |
 	
 	self pflag ifTrue: [ ^ self ].
-	msg := 'SUNTAX ERROR:\n'
-			, 'rule: ' , (self stack at: (self stackFrame * self stackFrameSize + 3)) asString , '\n'
-			, 'last token: ' , self token , '\n'
-			, 'out string: ' , self outStr , '\n'
-			, 'INPUT: ' , '\n'.
+	msg := 'SUNTAX ERROR:'
+			, Character cr
+			, 'rule: ' , (self stack at: (self stackFrame * self stackFrameSize + 3)) asString
+			, Character cr
+			, 'last token: ' , self token
+			, Character cr
+			, 'out string: ' , self outStr
+			, Character cr
+			, 'INPUT: '
+			, Character cr.
 			
 	i := self inp - 20. (i < 0) 						ifTrue: [ i := 0 ].  
 	j := self inp + 20. (j > self inbuf size) 	ifTrue: [ j := self inbuf size ].

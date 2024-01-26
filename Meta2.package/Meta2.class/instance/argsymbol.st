@@ -1,7 +1,7 @@
 private
 argsymbol
 
-	self symbolArgument: ''.
+	self symbolArgument: String empty.
 	[ ((self ic at: self programCounter) ~= Character space) 
 	& ((self ic at: self programCounter) ~= Character tab)
 	] whileTrue: [ self programCounterIncrement ].

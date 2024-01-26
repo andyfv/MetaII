@@ -1,6 +1,6 @@
 private
 argstring
-	self stringarg: ''.
+	self stringarg: String empty.
 	[(self ic at: self programCounter) ~= $']
 		whileTrue: [ self programCounterIncrement ].
 	self programCounterIncrement.

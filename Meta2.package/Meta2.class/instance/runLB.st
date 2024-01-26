@@ -1,4 +1,4 @@
 op codes
 runLB
-	self outStr: ''.
+	self outStr: String empty.
 		

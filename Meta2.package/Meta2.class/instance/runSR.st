@@ -5,7 +5,7 @@ runSR
 	self pflag: ((self inbuf at: self inp) = $').
 	
 	self pflag ifTrue: [
-		self token: ''.
+		self token: String empty.
 		[self pflag] whileTrue: [
 			self token: (self token , (self inbuf at: inp) asString).
 			self inp: self inp + 1.
