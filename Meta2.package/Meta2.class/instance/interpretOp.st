@@ -6,7 +6,7 @@ interpretOp
 	op := ''.
 	
 	[ (oc < self ic size) and: 
-	( ((self ic at: oc) isInteger) or: 
+	( ((self ic at: oc) isDigit) or: 
 	[ (self ic at: oc) isLetter ]
 	)] whileTrue: [ op := op , (self ic at: oc) asString . oc := oc + 1 ].
 	
@@ -29,7 +29,7 @@ interpretOp
 	switch add: 'SET' 	-> [ self runSET. ^ self ].
 	switch add: 'SR' 	-> [ self runSR. ^ self ].
 	switch add: 'TST' 	-> [ self argstring. self runTST: self stringarg. ^ self ].
-		
+
 	switch at: op 
 				ifPresent: [ :b | b value ]
 				ifAbsent: [ 
