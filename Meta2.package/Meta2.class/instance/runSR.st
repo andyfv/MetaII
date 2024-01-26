@@ -6,8 +6,8 @@ runSR
 	
 	self pflag ifTrue: [
 		self token: ''.
-		self pflag whileTrue: [
-			self token: self token , (self inbuf at: inp).
+		[self pflag] whileTrue: [
+			self token: (self token , (self inbuf at: inp) asString).
 			self inp: self inp + 1.
 			self pflag: (inbuf at: inp) isDigit .
 			].
