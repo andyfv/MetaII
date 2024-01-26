@@ -1,19 +1,16 @@
 op codes
 runTST: aString
-	"Needs fixing. Currently if the strings to comapre ends with the same
-	character the comparison returns true even though the previous characters
-	do not match "
+	"Test aString from the interpreter against a string from the input code.
+	If they match increment the input code pointer 'inp' with the size of the string"
+	| inpString |
 
 	"Delete initial whitespace"
 	self spaces.
 	self pflag: true.
 	
-	(self pflag) ifTrue: 
-		[ 1 to: aString size do: [ :i | 
-			self pflag: ((aString at: i) copy asUppercase  
-								= 
-								((self inbuf at: (self inp + (i - 1))) copy asUppercase )).
-			].
-		].
-	
+	(inp + aString size - 1) <= inbuf size
+		ifFalse: [ ^ self pflag: false ]
+		ifTrue: [ inpString := inbuf copyFrom: inp to: (inp + aString size - 1) ].
+		
+	self pflag: (inpString asUppercase = aString asUppercase).
 	self pflag ifTrue: [ self inp: self inp + aString size ].
