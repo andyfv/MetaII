@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"size",
-		"dict"
+		"array"
 	],
 	"name" : "StackFrame",
 	"type" : "normal"

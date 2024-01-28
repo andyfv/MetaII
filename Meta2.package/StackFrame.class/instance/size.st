@@ -1,3 +1,3 @@
 accessing
 size
-	^ self dict size
+	^ self array size

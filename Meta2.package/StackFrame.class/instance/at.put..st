@@ -1,3 +1,3 @@
 accessing
-at: aKey put: aValue
-	^ self dict at: aKey put: aValue
+at: anIndex put: aValue
+	^ self array at: anIndex put: aValue

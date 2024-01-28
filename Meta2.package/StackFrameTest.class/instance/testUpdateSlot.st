@@ -1,16 +1,27 @@
 tests
 testUpdateSlot
 	| stackFrame |
-	stackFrame := StackFrame new.
+	stackFrame := StackFrame new: 5.
 	
-	stackFrame add: #gn1 withValue: 0. 
+	self assert: (stackFrame at: 1) equals: nil.
+	self assert: (stackFrame at: 2) equals: nil.
+	self assert: (stackFrame at: 3) equals: nil.
+	self assert: (stackFrame at: 4) equals: nil.
+	self assert: (stackFrame at: 5) equals: nil.
 	
-	self assert: (stackFrame size) equals: 1.
-	self assert: (stackFrame at: #gn1) equals: 0.
-
-	stackFrame at: #gn1 put: 1.
+	stackFrame at: 1 put: 1. 
 	
-	self assert: (stackFrame size) equals: 1.
-	self assert: (stackFrame at: #gn1) equals: 1.
+	self assert: (stackFrame at: 1) equals: 1.
+	self assert: (stackFrame at: 2) equals: nil.
+	self assert: (stackFrame at: 3) equals: nil.
+	self assert: (stackFrame at: 4) equals: nil.
+	self assert: (stackFrame at: 5) equals: nil.
 	
-	self should: [ stackFrame at: 2 ] raise: Error.
+	stackFrame at: 1 put: 2.
+	
+	self assert: (stackFrame at: 1) equals: 2.
+	self assert: (stackFrame at: 2) equals: nil.
+	self assert: (stackFrame at: 3) equals: nil.
+	self assert: (stackFrame at: 4) equals: nil.
+	self assert: (stackFrame at: 5) equals: nil.
+	

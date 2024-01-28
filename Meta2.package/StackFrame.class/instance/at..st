@@ -1,3 +1,3 @@
 accessing
-at: aKey
-	^ self dict at: aKey
+at: anIndex
+	^ self array at: anIndex
