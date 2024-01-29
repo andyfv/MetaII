@@ -4,6 +4,6 @@ runEND
 	self exitlevel: true.
 	self pflag ifFalse: [ 
 		self error: 'first rule ' 
-							, (self stack at: (self stackFrame * self stackFrameSize + 3)) asString
+							, (self stack top at: 3) asString
 							, ' failed' 
 							].

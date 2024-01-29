@@ -5,7 +5,7 @@ runBE
 	self pflag ifTrue: [ ^ self ].
 	msg := 'SUNTAX ERROR:'
 			, Character cr
-			, 'rule: ' , (self stack at: (self stackFrame * self stackFrameSize + 3)) asString
+			, 'rule: ' , (self stack top at: 3) asString
 			, Character cr
 			, 'last token: ' , self token
 			, Character cr
@@ -14,11 +14,11 @@ runBE
 			, 'INPUT: '
 			, Character cr.
 			
-	i := self inp - 20. (i < 0) 						ifTrue: [ i := 0 ].  
-	j := self inp + 20. (j > self inbuf size) 	ifTrue: [ j := self inbuf size ].
+	i := self inputIndex - 20. (i < 0) 						ifTrue: [ i := 0 ].  
+	j := self inputIndex + 20. (j > self input size) 	ifTrue: [ j := self input size ].
 	
-	ctx := (self inbuf copyFrom: i to: inp)
-			, (self inbuf copyFrom: inp to: j).
+	ctx := (self input copyFrom: i to: self inputIndex)
+			, (self input copyFrom: self inputIndex to: j).
 			
 	msg := msg , ctx , '\n\n' , 'CHAR CODES:\n'.
 	

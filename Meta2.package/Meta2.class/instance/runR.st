@@ -1,12 +1,12 @@
 op codes
 runR
 	
-	self stackFrame = 0 ifTrue: [ self runEND. ^ self ].
+	self stack isEmpty ifTrue: [ self runEND. ^ self ].
 	
 	"Return the pc"
-	self programCounter: (self stack at: self stackFrame * self stackFrameSize + 3).
+	self programCounter: (self stack top at: 3).
 		
-	self margin: (self stack at: self stackFrame * self stackFrameSize + 5).
+	self margin: (self stack top at: 5).
 	
 	"Pop the stackframe"
-	self stackFrame: self stackFrame - 1. 
+	self stack pop.

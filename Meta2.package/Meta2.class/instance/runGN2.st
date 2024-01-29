@@ -1,11 +1,10 @@
 op codes
 runGN2
-	| gn2 |
-	gn2 := self stackFrame * stackFrameSize + 2.
-	(self stack at: gn2) = 0
-		ifTrue: [ 
-			self stack at: gn2 put: self gnLabel.
-			self gnLabel: self gnLabel + 1.
-			].
-		self out: ('L' , self stack at: gn2 )
+	
+	(self stack top at: 2) = 0 ifTrue: [
+		self stack top at: 2 put: self gnLabel.
+		self gnLabel: self gnLabel + 1.
+		].
+	
+	self out: ('L' , (self stack top at: 2) asString)	
 		
