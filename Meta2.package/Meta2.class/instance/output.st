@@ -1,4 +1,4 @@
 accessing
-outbuf
+output
 	"Return the output text"
-	^ outbuf
+	^ output

@@ -1,4 +1,4 @@
 op codes
 runB
 	
-	self findLabel: self symbolArgument.
+	self findLabel: self symbolArg.

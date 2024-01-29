@@ -1,4 +1,4 @@
 accessing
-symbolArgument: anObject
+symbolArg: aString
 	"Set the argument for order codes with symbol argument"
-	symbolArgument := anObject
+	symbolArg := aString

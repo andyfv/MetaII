@@ -1,4 +1,4 @@
 accessing
-symbolArgument
+symbolArg
 	"Return the argument for order codes with symbol argument"
-	^ symbolArgument
+	^ symbolArg

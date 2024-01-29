@@ -2,7 +2,7 @@ private
 out: aString
 	| col |
 	
-	(self margin > 0) & (self outStr size = 0)
+	(self margin > 0) & (self outStr isEmpty)
 		ifTrue: [
 			col := 0.
 			(col < self margin) whileTrue: [ 

@@ -1,4 +1,4 @@
 accessing
-inbuf
+input
 	"Return the input buffer"
-	^ inbuf
+	^ input

@@ -8,9 +8,9 @@ runTST: aString
 	self spaces.
 	self pflag: true.
 	
-	(inp + aString size - 1) <= inbuf size
+	(self inputIndex + aString size - 1) <= self input size
 		ifFalse: [ ^ self pflag: false ]
-		ifTrue: [ inpString := inbuf copyFrom: inp to: (inp + aString size - 1) ].
+		ifTrue: [ inpString := self input copyFrom: self inputIndex to: (self inputIndex + aString size - 1) ].
 		
 	self pflag: (inpString asUppercase = aString asUppercase).
-	self pflag ifTrue: [ self inp: self inp + aString size ].
+	self pflag ifTrue: [ self inputIndex: self inputIndex + aString size ].

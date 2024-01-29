@@ -1,4 +1,4 @@
 accessing
-stringarg
+stringArg
 	"Return the argument for order codes with string argument"
-	^ stringarg
+	^ stringArg

@@ -2,14 +2,14 @@ op codes
 runID
 
 	self spaces. 
-	self pflag: ((self inbuf at: inp) isLetter).
+	self pflag: ((self input at: self inputIndex) isLetter).
 	
 	self pflag ifTrue: [
 		self token: String empty.
 		[self pflag] whileTrue: [
-			self token: (self token , (self inbuf at: inp) asString).
-			self inp: self inp + 1.
-			self pflag: ((self inbuf at: inp) isLetter) | ((self inbuf at: inp) isDigit).
+			self token: (self token , (self input at: self inputIndex) asString).
+			self inputIndex: self inputIndex + 1.
+			self pflag: ((self input at: self inputIndex) isLetter) | ((self input at: self inputIndex) isDigit).
 			].
 		self pflag: true.
 		].

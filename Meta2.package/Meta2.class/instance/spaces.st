@@ -2,8 +2,8 @@ private
 spaces
 	"Delete initial whitespace"
 	
-	[ ((self inbuf at: self inp) = Character space) 
-	| ((self inbuf at: self inp) = Character cr)
-	| ((self inbuf at: self inp) = Character lf) 
-	| ((self inbuf at: self inp) = Character tab)
-	] whileTrue: [ self inp: self inp + 1 ].
+	[ ((self input at: self inputIndex) = Character space)
+	| ((self input at: self inputIndex) = Character cr)
+	| ((self input at: self inputIndex) = Character lf) 
+	| ((self input at: self inputIndex) = Character tab)
+	] whileTrue: [ self inputIndex: self inputIndex + 1 ].

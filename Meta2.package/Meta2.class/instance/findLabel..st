@@ -2,10 +2,10 @@ private
 findLabel: aString
 	| found |
 	
-	self programCounter: (self ic findString: (Character lf asString , aString , Character lf asString)).
+	self programCounter: (self interpreter findString: (Character lf asString , aString , Character lf asString)).
 	found := (self programCounter >= 1).
 	
-	found ifFalse: [ self programCounter: (self ic findString: (Character cr asString, aString , Character cr asString)) ].
+	found ifFalse: [ self programCounter: (self interpreter findString: (Character cr asString, aString , Character cr asString)) ].
 	
 	found := (self programCounter >= 1).
 	

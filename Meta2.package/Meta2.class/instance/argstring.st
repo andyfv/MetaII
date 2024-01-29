@@ -1,12 +1,12 @@
 private
 argstring
-	self stringarg: String empty.
-	[(self ic at: self programCounter) ~= $']
+	self stringArg: String empty.
+	[(self interpreter at: self programCounter) ~= $']
 		whileTrue: [ self programCounterIncrement ].
 	self programCounterIncrement.
-	[(self ic at: self programCounter) ~= $']
+	[(self interpreter at: self programCounter) ~= $']
 		whileTrue: [ 
-			self stringarg: self stringarg , (self ic at: self programCounter) asString.
+			self stringArg: self stringArg , (self interpreter at: self programCounter) asString.
 			self programCounterIncrement.
 			].
 	self programCounterIncrement.
