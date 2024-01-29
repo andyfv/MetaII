@@ -3,11 +3,6 @@ testEmpty
 	"Test new stackframe"
 	
 	| stackFrame |
-	stackFrame := StackFrame new: 5.
+	stackFrame := StackFrame new.
 	
-	self assert: (stackFrame size) equals: 5.
-	self assert: (stackFrame at: 1) equals: nil.
-	self assert: (stackFrame at: 2) equals: nil.
-	self assert: (stackFrame at: 3) equals: nil.
-	self assert: (stackFrame at: 4) equals: nil.
-	self assert: (stackFrame at: 5) equals: nil.
+	self assert: (stackFrame size) equals: 0.
