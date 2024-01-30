@@ -16,7 +16,6 @@ A metacompiler based on [Meta II](https://dl.acm.org/doi/10.1145/800257.808896) 
 
 This implementation is based on the work of James M. Neighbors and the [Tutorial: Metacompilers Part 1](https://www.bayfronttechnologies.com/mc_tutorial.html).
 
-The interpreter code is 
 
 ## How to run it
 
@@ -25,7 +24,7 @@ The interpreter code is
 
 ## How to use it
 
-1) There is a basic Meta II interpreter byte code in the method `Meta2>>#interpreterCode` that is loaded automatically. Change this if you want to load a new version.
+1) There is a basic Meta II interpreter byte code in the method `Meta2>>#interpreterCode` that is loaded automatically. Change the `Meta2>>#loadInterpreter` method if you want to load a new version.
 
 2) There is a basic Meta II metacompiler code written in the original Meta II notation that is automatically loaded, as a method at `Meta2>>#inputCode`. Load your high-level Meta II code as your input by changing the `Meta2>>#loadInputCode` method.
 
@@ -35,13 +34,13 @@ meta := Meta2 new.
 meta startCompile
 ```
 
-4) The output interpreter will be automatically saved as a method in `Meta2>>#outputCode`
+4) If the compilation is successful the output interpreter code will be automatically saved as a method in `Meta2>>#outputCode`
 
 ## Implementation
 
-The Meta II metacompiler is very compact. The basic Meta II compiler that generates and write it's own language is just 6 statements and all the code is just 26 lines of code. The 26 lines in turn are compiled to Meta II byte code of just 211 lines. To move the compiler to a different target only the byte op codes need to be reimplemented. The basic op code table consists of the following operators:
+The Meta II metacompiler is very compact. The basic Meta II compiler that generates and write it's own language is just 6 statements and all the code is just 26 lines of code. The 26 lines in turn are compiled to Meta II byte code of just 211 lines. To move the compiler to a different target only the byte opcodes need to be reimplemented. The basic op code table consists of the following operators:
 
-| Operation     | Purpose                                   |
+| Mnemonic      | Purpose                                   |
 | ------------- | -------------                             |
 | ADR           | Starting location                         |
 | END           | End of input                              |
@@ -72,4 +71,4 @@ Currently the implementation reproduces the original Meta II from Dewey Val Scho
 
 ## Notes
 
-There is stuff to be done - tests, GUI, features, syntax...
+There is stuff to be done - tests, GUI, features, clean up the syntax...
