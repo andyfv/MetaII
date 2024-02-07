@@ -1,4 +1,4 @@
-input code
+loadCode
 loadInterpreterAsMethod
 	"Temporary solution to load the interpreter code and add it as a method"
 

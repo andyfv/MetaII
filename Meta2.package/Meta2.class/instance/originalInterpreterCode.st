@@ -1,5 +1,5 @@
-output code
-outputCode ^ 
+interpreter code
+originalInterpreterCode ^ 
 '	ADR PROGRAM
 OUT1
 	TST ''*1''
@@ -183,7 +183,7 @@ ST
 	BE
 	CLL EX1
 	BE
-	TST '';''
+	TST ''.,''
 	BE
 	CL ''R''
 	OUT

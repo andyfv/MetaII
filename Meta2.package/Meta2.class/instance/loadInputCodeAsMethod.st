@@ -1,4 +1,4 @@
-input code
+loadCode
 loadInputCodeAsMethod
 	"Temporary solution to load the input code and add it as a method"
 

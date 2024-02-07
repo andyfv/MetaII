@@ -1,5 +1,5 @@
-output code
-outputCode ^ 
+interpreter code
+c04Semicolon ^ 
 '	ADR PROGRAM
 OUT1
 	TST ''*1''
