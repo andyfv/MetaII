@@ -1,5 +1,5 @@
 output code
-outputCodeBasic ^ 
+originalOutputCode ^ 
 '	ADR PROGRAM
 OUT1
 	TST ''*1''

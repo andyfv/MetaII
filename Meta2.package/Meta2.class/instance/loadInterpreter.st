@@ -1,4 +1,4 @@
-input code
+loadCode
 loadInterpreter
 	| interpreterFileName |
 	interpreterFileName := 'meta2/interpreter.txt'.

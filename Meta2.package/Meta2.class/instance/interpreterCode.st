@@ -1,4 +1,4 @@
-input code
+interpreter code
 interpreterCode ^ 
 '	ADR PROGRAM
 OUT1
