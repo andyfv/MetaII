@@ -1,5 +1,9 @@
 compiler
 interpretOp
+	"The reading of the interpreter op codes is done here.
+	We read at the index of the programCounter and extract the op code.
+	If the op code exists in the opCodeTable we execute it, otherwise
+	return an error"
 	| operator operatorIndex |
 	
 	self programCounterIncrement.

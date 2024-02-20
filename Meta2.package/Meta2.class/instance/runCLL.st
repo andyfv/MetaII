@@ -1,5 +1,9 @@
 op codes
 runCLL
+"	Mnemonic	: CLL AAA
+	Purpose		: Call subroutine
+	Action		: Call the subroutine AAA stored in the runtime variable symbolArg
+						and push a new stackFrame"
 		
 	self stack push: self newStackFrame.
 	

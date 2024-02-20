@@ -1,5 +1,6 @@
 compiler
 initOpTable
+	"Initialize the Meta II op codes"
 
 	| table |
 	table := Dictionary new.

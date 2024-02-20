@@ -1,5 +1,6 @@
 input code
-i06SemicolonStep ^ 
+i06SemicolonStep ^
+"Steping stone input"
 '.SYNTAX PROGRAM
 
 OUT1 	= ''*1'' .OUT(''GN1'') 

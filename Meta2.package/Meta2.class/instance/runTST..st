@@ -1,7 +1,11 @@
 op codes
 runTST: aString
-	"Test aString from the interpreter against a string from the input code.
-	If they match increment the input code pointer 'inp' with the size of the string"
+"	Mnemonic	: TST 'string'
+	Purpose		: Test for string in input
+	Action		: Compare a string from input to aString given as an argument.
+						If they match skip over it in the input and set switch.
+						Otherwise reset switch"
+	
 	| inpString |
 
 	"Delete initial whitespace"

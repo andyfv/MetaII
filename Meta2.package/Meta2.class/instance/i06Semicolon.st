@@ -1,5 +1,7 @@
 input code
-i06Semicolon ^ 
+i06Semicolon ^
+"Updated syntax that uses ; instead of the dated ,. notation"
+
 '.SYNTAX PROGRAM
 
 OUT1 	= ''*1'' .OUT(''GN1'') 
