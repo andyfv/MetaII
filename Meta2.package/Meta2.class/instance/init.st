@@ -1,6 +1,6 @@
 compiler
 init
-	"Initialize the runtime:
+	"Initialize the runtime environment:
 		- stack
 		- input 
 		- interperter
@@ -11,8 +11,8 @@ init
 		
 	self stack: Stack new.
 	
-	self input: self i06Semicolon.
-	self interpreter: self c04Semicolon.
+	self input: self i07SlashToOr.
+	self interpreter: self c05SlashToOr.
 	self output: String empty.
 	
 	self outStr: Character tab asString.

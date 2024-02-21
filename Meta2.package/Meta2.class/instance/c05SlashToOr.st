@@ -1,5 +1,5 @@
-output code
-outputCode ^ 
+interpreter code
+c05SlashToOr ^ 
 '	ADR PROGRAM
 OUT1
 	TST ''*1''
