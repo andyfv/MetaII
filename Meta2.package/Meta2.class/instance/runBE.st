@@ -8,15 +8,15 @@ runBE
 	
 	self pflag ifTrue: [ ^ self ].
 	msg := 'SUNTAX ERROR:'
-			, Character cr
+			, Character cr asString
 			, 'rule: ' , (self stack top at: 3) asString
-			, Character cr
+			, Character cr asString
 			, 'last token: ' , self token
-			, Character cr
+			, Character cr asString
 			, 'out string: ' , self outStr
-			, Character cr
+			, Character cr asString
 			, 'INPUT: '
-			, Character cr.
+			, Character cr asString.
 			
 	i := self inputIndex - 20. (i < 0) 						ifTrue: [ i := 0 ].  
 	j := self inputIndex + 20. (j > self input size) 	ifTrue: [ j := self input size ].
